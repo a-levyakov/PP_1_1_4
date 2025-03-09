@@ -11,11 +11,7 @@ public class Main {
     public static void main(String[] args)  {
         UserService UserService = new UserServiceImpl();
 
-        try {
-            UserService.createUsersTable();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        UserService.createUsersTable();
 
         UserService.saveUser("Name1", "LastName1", (byte) 11);
         UserService.saveUser("Name2", "LastName2", (byte) 22);
